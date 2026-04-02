@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kurve — Apartment Price Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root {
+  --bg: #f0f0ed;
+  --surface: #ffffff;
+  --surface-2: #f7f7f5;
+  --border: #e2e2de;
+  --border-light: #ececea;
+  --navy: #0c2340;
+  --navy-mid: #1a4068;
+  --text-1: #111827;
+  --text-2: #4b5563;
+  --text-3: #9ca3af;
+  --green: #166534;
+  --green-bg: #f0fdf4;
+  --green-border: #bbf7d0;
+  --red: #991b1b;
+  --red-bg: #fef2f2;
+  --amber: #92400e;
+  --amber-bg: #fffbeb;
+  --blue: #1e3a8a;
+  --blue-bg: #eff6ff;
+  --purple: #5b21b6;
+  --purple-bg: #f5f3ff;
+  --glass-bg: rgba(255,255,255,0.12);
+  --glass-border: rgba(255,255,255,0.2);
+  --glass-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  --glass-blur: blur(20px) saturate(180%);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80') center/cover fixed no-repeat;
+  color: #fff;
+  min-height:100vh;
+  font-size:14px;
+  -webkit-font-smoothing:antialiased;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 0;
+}
+body > * { position: relative; z-index: 1; }
+
+/* ── Header ── */
+.header {
+  backdrop-filter:var(--glass-blur);
+  -webkit-backdrop-filter:var(--glass-blur);
+  background:rgba(255,255,255,0.10);
+  border-bottom:1px solid var(--glass-border);
+  padding:20px 40px;
+  display:flex; justify-content:space-between; align-items:center;
+  box-shadow:var(--glass-shadow);
+}
+.header-left h1 { font-size:17px; font-weight:600; color:#fff; letter-spacing:-0.2px; }
+.header-left .subtitle { font-size:12px; color:rgba(255,255,255,0.65); margin-top:3px; }
+.header-left .subtitle a { color:rgba(255,255,255,0.6); text-decoration:none; }
+.header-left .subtitle a:hover { color:#fff; }
+.header-meta { text-align:right; }
+.header-meta .meta-label { font-size:9px; font-weight:600; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,0.4); }
+.header-meta .meta-val { font-size:12px; font-weight:500; color:rgba(255,255,255,0.8); margin-top:2px; }
+.context-bar {
+  backdrop-filter:var(--glass-blur);
+  -webkit-backdrop-filter:var(--glass-blur);
+  background:rgba(255,255,255,0.07);
+  border-bottom:1px solid var(--glass-border);
+  padding:7px 40px; display:flex; align-items:center; gap:18px;
+  font-size:11px; color:rgba(255,255,255,0.55);
+}
+.context-bar strong { color:rgba(255,255,255,0.9); font-weight:500; }
+.context-dot { width:3px; height:3px; border-radius:50%; background:rgba(255,255,255,0.3); display:inline-block; }
+
+.container { max-width:1440px; margin:0 auto; padding:28px 40px; }
+
+/* ── Section Label ── */
+.section-label {
+  font-size:10px; font-weight:600; text-transform:uppercase;
+  letter-spacing:1.4px; color:rgba(255,255,255,0.5); margin-bottom:12px;
+}
+
+/* ── KPI Cards ── */
+.summary-grid {
+  display:grid; grid-template-columns:repeat(6,1fr);
+  gap:12px; background:transparent;
+  margin-bottom:28px;
+}
+.kpi-card {
+  backdrop-filter:var(--glass-blur);
+  -webkit-backdrop-filter:var(--glass-blur);
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  border-radius:16px;
+  box-shadow:var(--glass-shadow);
+  padding:18px 20px; position:relative; overflow:hidden;
+}
+.kpi-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+.kpi-card.k-green::before  { background:var(--green); }
+.kpi-card.k-navy::before   { background:var(--navy); }
+.kpi-card.k-purple::before { background:var(--purple); }
+.kpi-card.k-blue::before   { background:var(--blue); }
+.kpi-card.k-teal::before   { background:#0d9488; }
+.kpi-card.k-amber::before  { background:#d97706; }
+.kpi-label { font-size:9px; font-weight:600; text-transform:uppercase; letter-spacing:1.1px; color:rgba(255,255,255,0.55); margin-bottom:9px; }
+.kpi-value { font-size:26px; font-weight:700; color:#fff; letter-spacing:-1px; line-height:1; }
+.kpi-sub   { font-size:11px; color:rgba(255,255,255,0.6); margin-top:6px; }
+.kpi-card.k-green .kpi-value { color:#6ee7b7; }
+.kpi-card.k-teal  .kpi-value { color:#5eead4; }
+
+/* ── Alerts ── */
+.alerts-banner { display:none; background:var(--green-bg); border:1px solid var(--green-border); border-left:3px solid var(--green); border-radius:4px; padding:14px 18px; margin-bottom:20px; }
+.alerts-banner.show { display:block; }
+.alert-title { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:var(--green); margin-bottom:8px; }
+.alert-item { display:flex; align-items:center; gap:8px; font-size:12px; padding:3px 0; color:var(--text-1); }
+.badge { font-size:9px; font-weight:700; padding:2px 6px; border-radius:2px; text-transform:uppercase; white-space:nowrap; letter-spacing:0.5px; }
+.badge.drop { background:#dcfce7; color:var(--green); border:1px solid #bbf7d0; }
+.badge.rise { background:var(--red-bg); color:var(--red); border:1px solid #fecaca; }
+.badge.new  { background:var(--blue-bg); color:var(--blue); border:1px solid #bfdbfe; }
+.badge.gone { background:var(--amber-bg); color:var(--amber); border:1px solid #fde68a; }
+
+/* ── Controls ── */
+.controls { display:flex; align-items:center; gap:8px; margin-bottom:14px; flex-wrap:wrap; }
+.filter-tabs { display:flex; backdrop-filter:var(--glass-blur); -webkit-backdrop-filter:var(--glass-blur); background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:10px; overflow:hidden; }
+.filter-tab { padding:7px 14px; font-size:12px; font-weight:500; cursor:pointer; color:rgba(255,255,255,0.7); border:none; background:none; transition:all .15s; border-right:1px solid rgba(255,255,255,0.15); font-family:inherit; }
+.filter-tab:last-child { border-right:none; }
+.filter-tab.active { background:rgba(255,255,255,0.25); color:#fff; }
+.filter-tab:hover:not(.active) { background:rgba(255,255,255,0.1); }
+.search-box { padding:7px 12px; backdrop-filter:var(--glass-blur); -webkit-backdrop-filter:var(--glass-blur); background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:10px; color:#fff; font-size:12px; width:200px; outline:none; font-family:inherit; }
+.search-box:focus { border-color:rgba(255,255,255,0.5); }
+.search-box::placeholder { color:rgba(255,255,255,0.4); }
+.sort-select { padding:7px 12px; backdrop-filter:var(--glass-blur); -webkit-backdrop-filter:var(--glass-blur); background:rgba(20,20,40,0.6); border:1px solid var(--glass-border); border-radius:10px; color:#fff; font-size:12px; outline:none; cursor:pointer; font-family:inherit; }
+.toggle-btn { padding:7px 13px; font-size:11px; font-weight:500; border-radius:10px; cursor:pointer; border:1px solid var(--glass-border); backdrop-filter:var(--glass-blur); -webkit-backdrop-filter:var(--glass-blur); background:var(--glass-bg); color:rgba(255,255,255,0.75); transition:all .15s; font-family:inherit; }
+.toggle-btn.active { border-color:rgba(251,191,36,0.6); color:#fbbf24; background:rgba(251,191,36,0.15); }
+.spacer { flex:1; }
+
+/* ── Table ── */
+.table-wrap { backdrop-filter:var(--glass-blur); -webkit-backdrop-filter:var(--glass-blur); background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:16px; overflow:hidden; margin-bottom:28px; box-shadow:var(--glass-shadow); }
+.table-header-row { display:flex; justify-content:space-between; align-items:center; padding:14px 20px; border-bottom:1px solid rgba(255,255,255,0.12); }
+.table-title { font-size:13px; font-weight:600; color:#fff; }
+.unit-count-badge { font-size:11px; color:rgba(255,255,255,0.7); background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); padding:3px 10px; border-radius:8px; }
+.table-scroll { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; min-width:900px; }
+thead th {
+  padding:8px 16px; text-align:left; font-size:9px; font-weight:700;
+  text-transform:uppercase; letter-spacing:0.9px; color:rgba(255,255,255,0.5);
+  background:rgba(255,255,255,0.08); cursor:pointer; white-space:nowrap;
+  user-select:none; border-bottom:1px solid rgba(255,255,255,0.12);
+}
+thead th:hover { color:rgba(255,255,255,0.85); }
+thead th.th-center { text-align:center; }
+tbody tr { border-top:1px solid rgba(255,255,255,0.07); transition:background .1s; }
+tbody tr:hover { background:rgba(255,255,255,0.08); }
+tbody tr.removed-row { opacity:.45; }
+td { padding:11px 16px; font-size:13px; vertical-align:middle; color:rgba(255,255,255,0.85); }
+td.unit-num { font-weight:700; color:#fff; white-space:nowrap; }
+.bed-badge { display:inline-block; font-size:10px; font-weight:600; padding:2px 8px; border-radius:2px; letter-spacing:0.2px; }
+.bed-badge.studio  { background:rgba(139,92,246,0.25); color:#c4b5fd; border:1px solid rgba(139,92,246,0.3); }
+.bed-badge.one-bed { background:rgba(59,130,246,0.25); color:#93c5fd; border:1px solid rgba(59,130,246,0.3); }
+.bed-badge.two-bed { background:rgba(16,185,129,0.25); color:#6ee7b7; border:1px solid rgba(16,185,129,0.3); }
+td.price-col { font-weight:700; font-size:14px; color:#fff; white-space:nowrap; }
+.price-delta { display:inline-flex; align-items:center; font-size:10px; font-weight:600; padding:2px 6px; border-radius:2px; margin-left:4px; white-space:nowrap; }
+.price-delta.drop { background:rgba(16,185,129,0.2); color:#6ee7b7; }
+.price-delta.rise { background:rgba(239,68,68,0.15); color:#fca5a5; }
+.avail-badge { display:inline-block; font-size:10px; font-weight:600; padding:3px 9px; border-radius:2px; white-space:nowrap; letter-spacing:0.2px; }
+.avail-badge.now   { background:rgba(16,185,129,0.2); color:#6ee7b7; border:1px solid rgba(16,185,129,0.3); }
+.avail-badge.soon  { background:rgba(251,191,36,0.15); color:#fbbf24; border:1px solid rgba(251,191,36,0.3); }
+.avail-badge.later { background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.6); border:1px solid rgba(255,255,255,0.15); }
+.avail-badge.gone  { background:rgba(239,68,68,0.15); color:#fca5a5; font-style:italic; border:1px solid rgba(239,68,68,0.3); }
+.tom-badge { display:inline-block; font-size:10px; font-weight:600; padding:3px 8px; border-radius:2px; white-space:nowrap; }
+.tom-badge.fresh { background:rgba(59,130,246,0.2); color:#93c5fd; border:1px solid rgba(59,130,246,0.3); }
+.tom-badge.mid   { background:rgba(251,191,36,0.15); color:#fbbf24; border:1px solid rgba(251,191,36,0.3); }
+.tom-badge.stale { background:rgba(255,255,255,0.07); color:rgba(255,255,255,0.45); border:1px solid rgba(255,255,255,0.15); }
+.no-results { text-align:center; padding:48px 20px; color:rgba(255,255,255,0.45); font-size:13px; }
+.track-btn { background:none; border:none; cursor:pointer; font-size:15px; padding:3px 6px; border-radius:3px; transition:all .15s; line-height:1; color:rgba(255,255,255,0.35); }
+.track-btn:hover { color:#fbbf24; background:rgba(251,191,36,0.15); }
+.track-btn.tracked { color:#d97706; }
+
+/* ── Panels ── */
+.panel { backdrop-filter:var(--glass-blur); -webkit-backdrop-filter:var(--glass-blur); background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:16px; overflow:hidden; margin-bottom:28px; box-shadow:var(--glass-shadow); }
+.panel-header { padding:14px 20px; border-bottom:1px solid rgba(255,255,255,0.12); display:flex; justify-content:space-between; align-items:center; }
+.panel-title { font-size:13px; font-weight:600; color:#fff; }
+.panel-body { padding:20px; }
+
+/* ── Charts ── */
+.charts-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(380px,1fr)); gap:16px; margin-bottom:28px; }
+.chart-card { backdrop-filter:var(--glass-blur); -webkit-backdrop-filter:var(--glass-blur); background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:16px; padding:18px 20px; box-shadow:var(--glass-shadow); }
+.chart-card h3 { font-size:13px; font-weight:600; color:#fff; margin-bottom:3px; }
+.chart-card p  { font-size:11px; color:rgba(255,255,255,0.5); margin-bottom:16px; }
+.chart-wrap { position:relative; height:210px; }
+.trend-wrap { position:relative; height:240px; }
+.history-chart-wrap { position:relative; height:270px; }
+
+/* ── Floorplan Picker ── */
+.fp-select-row { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:16px; }
+.fp-btn { padding:4px 11px; font-size:11px; border-radius:8px; cursor:pointer; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.75); transition:all .15s; font-family:inherit; font-weight:500; }
+.fp-btn.active { border-color:rgba(255,255,255,0.5); color:#fff; background:rgba(255,255,255,0.25); }
+.fp-btn:hover:not(.active) { background:rgba(255,255,255,0.15); }
+
+/* ── Watchlist ── */
+.watchlist-units { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px; }
+.watchlist-chip { display:flex; align-items:center; gap:12px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); border-radius:10px; padding:10px 14px; font-size:12px; }
+.watchlist-chip .chip-unit { font-weight:700; color:#fff; font-size:13px; }
+.watchlist-chip .chip-info { color:rgba(255,255,255,0.65); font-size:11px; margin-top:1px; }
+.watchlist-chip .chip-price { color:#6ee7b7; font-weight:600; }
+.watchlist-chip .chip-remove { background:none; border:none; cursor:pointer; color:rgba(255,255,255,0.4); font-size:13px; padding:0 0 0 4px; margin-left:4px; }
+.watchlist-chip .chip-remove:hover { color:var(--red); }
+.watchlist-empty { color:rgba(255,255,255,0.4); font-size:12px; padding:8px 0; }
+.alert-setup { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:16px 18px; }
+.alert-setup-title { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:rgba(255,255,255,0.45); margin-bottom:12px; }
+.alert-setup-row { display:flex; align-items:flex-end; gap:14px; flex-wrap:wrap; }
+.field-label { font-size:9px; font-weight:600; text-transform:uppercase; letter-spacing:0.9px; color:rgba(255,255,255,0.5); margin-bottom:6px; }
+.alert-email-input { padding:8px 12px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); border-radius:8px; color:#fff; font-size:12px; width:260px; outline:none; font-family:inherit; }
+.alert-email-input:focus { border-color:rgba(255,255,255,0.5); }
+.alert-scope { display:flex; gap:6px; }
+.scope-btn { padding:7px 14px; font-size:11px; font-weight:500; border-radius:8px; cursor:pointer; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.7); transition:all .15s; font-family:inherit; }
+.scope-btn.active { border-color:rgba(255,255,255,0.5); color:#fff; background:rgba(255,255,255,0.25); }
+.save-alerts-btn { padding:8px 18px; background:rgba(255,255,255,0.2); color:#fff; border:1px solid rgba(255,255,255,0.3); border-radius:8px; font-size:12px; font-weight:600; cursor:pointer; transition:all .15s; font-family:inherit; }
+.save-alerts-btn:hover { background:rgba(255,255,255,0.3); }
+.alert-status { font-size:11px; color:#6ee7b7; margin-top:10px; display:none; }
+.alert-status.show { display:block; }
+
+/* ── Changes ── */
+.changes-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+.change-group h4 { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:1.1px; margin-bottom:10px; }
+.change-group.drops h4     { color:var(--green); }
+.change-group.rises h4     { color:var(--red); }
+.change-group.new-units h4 { color:var(--blue); }
+.change-group.removed h4   { color:var(--amber); }
+.change-row { display:flex; justify-content:space-between; align-items:center; padding:8px 12px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:8px; margin-bottom:5px; font-size:12px; }
+.change-row .unit-info { color:rgba(255,255,255,0.7); }
+.change-row .unit-info strong { color:#fff; }
+.change-row .delta { font-weight:700; text-align:right; line-height:1.5; font-size:12px; }
+.delta.green  { color:var(--green); }
+.delta.red    { color:var(--red); }
+.delta.blue   { color:var(--blue); }
+.delta.orange { color:var(--amber); }
+.no-change { color:rgba(255,255,255,0.4); font-size:12px; font-style:italic; padding:6px 0; }
+
+/* ── Footer ── */
+.footer { text-align:center; padding:16px; color:rgba(255,255,255,0.4); font-size:11px; border-top:1px solid rgba(255,255,255,0.1); backdrop-filter:var(--glass-blur); -webkit-backdrop-filter:var(--glass-blur); background:rgba(255,255,255,0.05); }
+
+@media(max-width:900px){
+  .container{padding:16px;}
+  .header{padding:16px;flex-direction:column;align-items:flex-start;gap:10px;}
+  .context-bar{padding:8px 16px;flex-wrap:wrap;}
+  .charts-grid{grid-template-columns:1fr;}
+  .summary-grid{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <h1>Kurve Apartment — Price Intelligence</h1>
+    <div class="subtitle">2801 Sunset Pl, Los Angeles, CA 90005 &nbsp;&middot;&nbsp; <a href="https://www.apartments.com/kurve-los-angeles-ca/047tn61/" target="_blank">apartments.com &nearr;</a></div>
+  </div>
+  <div class="header-meta">
+    <div class="meta-label">Last Updated</div>
+    <div class="meta-val" id="lastUpdated">—</div>
+  </div>
+</div>
+
+<div class="context-bar">
+  <span>Auto-updated daily at 12 AM PST via GitHub Actions</span>
+  <span class="context-dot"></span>
+  <span>Alerts sent to <strong>jonathanbgunawan@gmail.com</strong></span>
+  <span class="context-dot"></span>
+  <span>Tracking since <strong>Mar 10, 2026</strong></span>
+</div>
+
+<div class="container">
+
+
+  <!-- KPI Cards -->
+  <div class="summary-grid">
+    <div class="kpi-card k-purple">
+      <div class="kpi-label">Lowest Studio</div>
+      <div class="kpi-value" id="lowestStudio">—</div>
+      <div class="kpi-sub" id="lowestStudioSub">—</div>
+    </div>
+    <div class="kpi-card k-blue">
+      <div class="kpi-label">Lowest 1-Bedroom</div>
+      <div class="kpi-value" id="lowestOneBed">—</div>
+      <div class="kpi-sub" id="lowestOneBedSub">—</div>
+    </div>
+    <div class="kpi-card k-green">
+      <div class="kpi-label">Lowest 2-Bedroom</div>
+      <div class="kpi-value" id="lowestTwoBed">—</div>
+      <div class="kpi-sub" id="lowestTwoBedSub">—</div>
+    </div>
+    <div class="kpi-card k-navy">
+      <div class="kpi-label">Active Listings</div>
+      <div class="kpi-value" id="totalUnits">—</div>
+      <div class="kpi-sub" id="totalFP">—</div>
+    </div>
+    <div class="kpi-card k-teal">
+      <div class="kpi-label">Avg Rent Drop Since Mar 10</div>
+      <div class="kpi-value" id="totalSavings">—</div>
+      <div class="kpi-sub" id="savingsSub">—</div>
+    </div>
+    <div class="kpi-card k-amber">
+      <div class="kpi-label">Units With Price Drop</div>
+      <div class="kpi-value" id="dropCount">—</div>
+      <div class="kpi-sub" id="dropSub">since Mar 10</div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="All" onclick="setFilter(this)">All</button>
+      <button class="filter-tab" data-filter="Studio" onclick="setFilter(this)">Studios</button>
+      <button class="filter-tab" data-filter="1 Bed" onclick="setFilter(this)">1-Beds</button>
+      <button class="filter-tab" data-filter="2 Bed" onclick="setFilter(this)">2-Beds</button>
+    </div>
+    <input class="search-box" type="text" placeholder="Search unit or floorplan&hellip;" oninput="setSearch(this.value)">
+    <select class="sort-select" onchange="setSort(this.value)">
+      <option value="price_asc">Price: Low &rarr; High</option>
+      <option value="price_desc">Price: High &rarr; Low</option>
+      <option value="avail">Availability: Soonest</option>
+      <option value="sqft_desc">Sq Ft: Largest First</option>
+      <option value="ppsf">$/Sq Ft: Lowest First</option>
+      <option value="drop_desc">Biggest Total Drop</option>
+      <option value="tom_asc">Time on Market: Newest</option>
+    </select>
+    <div class="spacer"></div>
+    <button class="toggle-btn" id="removedToggle" onclick="toggleRemoved()">Show Removed Units</button>
+  </div>
+
+  <!-- Active Units Table -->
+  <div class="table-wrap">
+    <div class="table-header-row">
+      <div class="table-title">Active Listings</div>
+      <div class="unit-count-badge" id="unitCountBadge">— units</div>
+    </div>
+    <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Unit #</th>
+          <th>Floorplan</th>
+          <th>Type</th>
+          <th>Sq Ft</th>
+          <th>Rent / Mo</th>
+          <th>$/Sq Ft</th>
+          <th>Total Change</th>
+          <th>Time on Market</th>
+          <th>Availability</th>
+          <th class="th-center">Track</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    </div>
+  </div>
+
+  <!-- Price Trend Chart -->
+  <div class="panel">
+    <div class="panel-header">
+      <div class="panel-title">Average Rent Trend by Unit Type</div>
+      <div class="unit-count-badge" id="snapshotBadge">3 snapshots</div>
+    </div>
+    <div class="panel-body">
+      <div class="trend-wrap"><canvas id="trendChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Overview Charts -->
+  <div class="section-label">Current Snapshot Overview</div>
+  <div class="charts-grid">
+    <div class="chart-card">
+      <h3>Price Range by Type</h3>
+      <p>Min–max monthly rent across all active units</p>
+      <div class="chart-wrap"><canvas id="priceRangeChart"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>Price Distribution</h3>
+      <p>Active units by monthly rent bucket</p>
+      <div class="chart-wrap"><canvas id="distChart"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>Units Available by Floorplan</h3>
+      <p>Current availability per floorplan (top 14)</p>
+      <div class="chart-wrap"><canvas id="availChart"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>Avg $/Sq Ft by Type</h3>
+      <p>Rent efficiency across bedroom types</p>
+      <div class="chart-wrap"><canvas id="ppsfChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Per-Unit Price History -->
+  <div class="panel">
+    <div class="panel-header">
+      <div class="panel-title">Per-Unit Price History</div>
+      <div class="unit-count-badge" id="historySnapshotCount">— snapshots</div>
+    </div>
+    <div class="panel-body">
+      <div class="fp-select-row" id="fpSelectRow"></div>
+      <div class="history-chart-wrap"><canvas id="historyCanvas"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Watchlist & Email Alerts -->
+  <div class="panel">
+    <div class="panel-header">
+      <div class="panel-title">Watchlist &amp; Email Alerts</div>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <div class="unit-count-badge" id="watchlistCount">0 tracked</div>
+        <button class="toggle-btn" onclick="clearWatchlist()" style="font-size:11px;padding:5px 10px;">Clear All</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div id="watchlistUnits" class="watchlist-units">
+        <div class="watchlist-empty" id="watchlistEmpty">Star (&starf;) any unit in the table above to begin tracking it here.</div>
+      </div>
+      <div class="alert-setup">
+        <div class="alert-setup-title">Email Alert Configuration</div>
+        <div class="alert-setup-row">
+          <div>
+            <div class="field-label">Alert email</div>
+            <input class="alert-email-input" type="email" id="alertEmail" value="jonathanbgunawan@gmail.com" placeholder="your@email.com">
+          </div>
+          <div>
+            <div class="field-label">Alert scope</div>
+            <div class="alert-scope">
+              <button class="scope-btn active" id="scopeWatched" onclick="setScope('watched')">Watched units only</button>
+              <button class="scope-btn" id="scopeAll" onclick="setScope('all')">All price drops</button>
+            </div>
+          </div>
+          <div>
+            <button class="save-alerts-btn" onclick="saveAlertPrefs()">Save Preferences</button>
+          </div>
+        </div>
+        <div class="alert-status" id="alertStatus"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Changes Since Mar 10 -->
+  <div class="panel">
+    <div class="panel-header">
+      <div class="panel-title">All Changes Since Mar 10</div>
+      <div class="unit-count-badge" id="snapshotBadge2">3 snapshots</div>
+    </div>
+    <div class="panel-body">
+      <div class="changes-grid" id="changesGrid"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">Kurve Apartment Tracker &middot; Data sourced from apartments.com &middot; Auto-updated daily at 12 AM PST via GitHub Actions</div>
+
+<script>
+// ── DATA (loaded from kurve_data.json) ────────────────────────────────────────
+let RAW_DATA = null;
+
+// ── STATE ─────────────────────────────────────────────────────────────────────
+let currentFilter='All', currentSearch='', currentSort='price_asc', showRemovedFlag=false;
+let activeUnits=[], removedUnits=[], firstPriceMap={}, firstSeenMap={}, watchlist=new Set();
+let alertScope = 'all'; // updated after data loads
+let charts={}, histChart=null;
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+function init() {
+  const snaps = RAW_DATA.snapshots;
+  const latest = snaps[snaps.length-1];
+
+  if (RAW_DATA.watchlist && RAW_DATA.watchlist.length) {
+    RAW_DATA.watchlist.forEach(u => watchlist.add(u));
+  }
+
+  snaps.forEach(snap => {
+    const snapDate = new Date(snap.timestamp);
+    snap.floorplans.forEach(fp => fp.units.forEach(u => {
+      if (!firstSeenMap[u.unit]) firstSeenMap[u.unit] = snapDate;
+      if (!firstPriceMap[u.unit]) firstPriceMap[u.unit] = u.price;
+    }));
+  });
+
+  const latestUnitSet = new Set();
+  latest.floorplans.forEach(fp => fp.units.forEach(u => {
+    latestUnitSet.add(u.unit);
+    activeUnits.push({...u, floorplan:fp.floorplan, beds:fp.beds, baths:fp.baths, deposit:fp.deposit});
+  }));
+
+  const seenRemoved = new Set();
+  snaps.slice(0,-1).forEach(snap => {
+    snap.floorplans.forEach(fp => fp.units.forEach(u => {
+      if (!latestUnitSet.has(u.unit) && !seenRemoved.has(u.unit)) {
+        seenRemoved.add(u.unit);
+        removedUnits.push({...u, floorplan:fp.floorplan, beds:fp.beds, baths:fp.baths, deposit:fp.deposit});
+      }
+    }));
+  });
+
+  const ts = new Date(latest.timestamp);
+  document.getElementById('lastUpdated').textContent =
+    ts.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) + ' ' +
+    ts.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+
+  const allA = activeUnits;
+  document.getElementById('totalUnits').textContent = allA.length;
+  document.getElementById('totalFP').textContent = latest.floorplans.length+' floorplans';
+
+  // Lowest price by category
+  const byType = t => allA.filter(u=>u.beds===t);
+  const lowOf  = arr => arr.length ? arr.reduce((a,b)=>a.price<b.price?a:b) : null;
+  const lowStudio = lowOf(byType('Studio'));
+  const low1Bed   = lowOf(byType('1 Bed'));
+  const low2Bed   = lowOf(byType('2 Bed'));
+  if(lowStudio){ document.getElementById('lowestStudio').textContent='$'+lowStudio.price.toLocaleString(); document.getElementById('lowestStudioSub').textContent='Unit '+lowStudio.unit+' · '+byType('Studio').length+' active'; }
+  if(low1Bed)  { document.getElementById('lowestOneBed').textContent='$'+low1Bed.price.toLocaleString();  document.getElementById('lowestOneBedSub').textContent='Unit '+low1Bed.unit+' · '+byType('1 Bed').length+' active'; }
+  if(low2Bed)  { document.getElementById('lowestTwoBed').textContent='$'+low2Bed.price.toLocaleString();  document.getElementById('lowestTwoBedSub').textContent='Unit '+low2Bed.unit+' · '+byType('2 Bed').length+' active'; }
+
+  // Avg % rent drop + drop count
+  const droppedUnits = allA.filter(u=>firstPriceMap[u.unit]&&firstPriceMap[u.unit]>u.price);
+  const avgPct = droppedUnits.length ? (droppedUnits.reduce((s,u)=>s+((firstPriceMap[u.unit]-u.price)/firstPriceMap[u.unit]*100),0)/droppedUnits.length).toFixed(1) : 0;
+  document.getElementById('totalSavings').textContent = droppedUnits.length ? '−'+avgPct+'%' : '0%';
+  document.getElementById('savingsSub').textContent = 'avg across units that dropped';
+  document.getElementById('dropCount').textContent = droppedUnits.length;
+  document.getElementById('dropSub').textContent = 'of '+allA.length+' units since Mar 10';
+
+  const snapLabel = snaps.length+' snapshots';
+  document.getElementById('snapshotBadge').textContent = snapLabel;
+  document.getElementById('snapshotBadge2').textContent = snapLabel;
+  document.getElementById('historySnapshotCount').textContent = snapLabel;
+
+  setScope(alertScope, false);
+  buildAlerts(snaps);
+  buildChangesSection(snaps);
+  renderTable();
+  renderWatchlist();
+  buildCharts(latest);
+  buildTrendChart(snaps);
+  buildHistorySection(snaps);
+}
+
+// ── ALERTS ────────────────────────────────────────────────────────────────────
+function buildAlerts(snaps) {
+  if (snaps.length < 2) return;
+  const prev=snaps[snaps.length-2], curr=snaps[snaps.length-1];
+  const prevMap={};
+  prev.floorplans.forEach(fp=>fp.units.forEach(u=>prevMap[u.unit]=u.price));
+  const drops=[], newU=[];
+  curr.floorplans.forEach(fp=>fp.units.forEach(u=>{
+    if (prevMap[u.unit]!==undefined && u.price<prevMap[u.unit])
+      drops.push({unit:u.unit,fp:fp.floorplan,old:prevMap[u.unit],curr:u.price,delta:prevMap[u.unit]-u.price});
+    else if (prevMap[u.unit]===undefined)
+      newU.push({unit:u.unit,fp:fp.floorplan,price:u.price});
+  }));
+  if (!drops.length && !newU.length) return;
+  const banner=document.getElementById('alertsBanner');
+  banner.classList.add('show');
+  const prevDate = new Date(prev.timestamp).toLocaleDateString('en-US',{month:'short',day:'numeric'});
+  const currDate = new Date(curr.timestamp).toLocaleDateString('en-US',{month:'short',day:'numeric'});
+  let html=`<div class="alert-title">Changes since last check (${prevDate} &rarr; ${currDate})</div>`;
+  drops.forEach(d=>html+=`<div class="alert-item"><span class="badge drop">Drop</span> Unit ${d.unit} (FP ${d.fp}): $${d.old.toLocaleString()} &rarr; $${d.curr.toLocaleString()} <strong style="color:#166534;margin-left:4px">&minus;$${d.delta.toLocaleString()}/mo</strong></div>`);
+  newU.forEach(u=>html+=`<div class="alert-item"><span class="badge new">New</span> Unit ${u.unit} (FP ${u.fp}) listed at $${u.price.toLocaleString()}/mo</div>`);
+  banner.innerHTML=html;
+}
+
+// ── TIME ON MARKET ────────────────────────────────────────────────────────────
+function timeOnMarket(unit) {
+  const snaps = RAW_DATA.snapshots;
+  const latestTs = new Date(snaps[snaps.length-1].timestamp);
+  const firstTs = firstSeenMap[unit];
+  if (!firstTs) return {days:0,label:'Today',cls:'fresh'};
+  const days = Math.round((latestTs - firstTs)/(1000*60*60*24));
+  if (days === 0) return {days:0,label:'New today',cls:'fresh'};
+  if (days <= 7)  return {days,label:days+'d',cls:'fresh'};
+  if (days <= 14) return {days,label:days+'d',cls:'mid'};
+  return {days,label:days+'d',cls:'stale'};
+}
+
+// ── TABLE ─────────────────────────────────────────────────────────────────────
+function setFilter(btn) {
+  currentFilter=btn.dataset.filter;
+  document.querySelectorAll('.filter-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderTable();
+}
+function setSearch(v) { currentSearch=v.toLowerCase(); renderTable(); }
+function setSort(v) { currentSort=v; renderTable(); }
+function toggleRemoved() {
+  showRemovedFlag=!showRemovedFlag;
+  const btn=document.getElementById('removedToggle');
+  btn.classList.toggle('active',showRemovedFlag);
+  btn.textContent=showRemovedFlag?'Hide Removed Units':'Show Removed Units';
+  renderTable();
+}
+function availSort(a) {
+  if(a==='Now') return 0;
+  const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const m=months.findIndex(mn=>a.includes(mn));
+  return m>=0?m*100+(parseInt(a.replace(/\D/g,''))||0):999;
+}
+function availClass(a) {
+  if(a==='Now') return 'now';
+  const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const idx=months.findIndex(mn=>a.includes(mn));
+  const cur=new Date().getMonth();
+  return idx<=cur+1?'soon':'later';
+}
+function bedBadge(b) {
+  const cls=b==='Studio'?'studio':b==='1 Bed'?'one-bed':'two-bed';
+  return `<span class="bed-badge ${cls}">${b}</span>`;
+}
+
+function renderTable() {
+  let rows=[...activeUnits];
+  if(showRemovedFlag) rows=rows.concat(removedUnits.map(u=>({...u,removed:true})));
+  if(currentFilter!=='All') rows=rows.filter(u=>u.beds===currentFilter);
+  if(currentSearch) rows=rows.filter(u=>
+    u.unit.toLowerCase().includes(currentSearch)||
+    u.floorplan.toLowerCase().includes(currentSearch)||
+    u.beds.toLowerCase().includes(currentSearch));
+
+  rows.sort((a,b)=>{
+    const da=firstPriceMap[a.unit]?firstPriceMap[a.unit]-a.price:0;
+    const db=firstPriceMap[b.unit]?firstPriceMap[b.unit]-b.price:0;
+    const ta=timeOnMarket(a.unit).days, tb=timeOnMarket(b.unit).days;
+    switch(currentSort){
+      case 'price_asc': return a.price-b.price;
+      case 'price_desc': return b.price-a.price;
+      case 'avail': return availSort(a.availability||'')-availSort(b.availability||'');
+      case 'sqft_desc': return b.sqft-a.sqft;
+      case 'ppsf': return (a.price/a.sqft)-(b.price/b.sqft);
+      case 'drop_desc': return db-da;
+      case 'tom_asc': return ta-tb;
+      default: return 0;
+    }
+  });
+
+  document.getElementById('unitCountBadge').textContent=rows.length+' unit'+(rows.length!==1?'s':'');
+  const body=document.getElementById('tableBody');
+  if(!rows.length){body.innerHTML='<tr><td colspan="10" class="no-results">No units match your filters.</td></tr>';return;}
+
+  body.innerHTML=rows.map(u=>{
+    const delta=firstPriceMap[u.unit]?firstPriceMap[u.unit]-u.price:0;
+    const pct=firstPriceMap[u.unit]?((delta/firstPriceMap[u.unit])*100).toFixed(1):0;
+    let totalChangeHtml='<span style="color:#9ca3af">—</span>';
+    if(!u.removed){
+      if(delta>0) totalChangeHtml=`<span class="price-delta drop">&#9660; $${delta.toLocaleString()} (${pct}%)</span>`;
+      else if(delta<0) totalChangeHtml=`<span class="price-delta rise">&#9650; $${Math.abs(delta).toLocaleString()} (${Math.abs(pct)}%)</span>`;
+    }
+    const tom=timeOnMarket(u.unit);
+    const tomHtml=u.removed?'<span style="color:#9ca3af">—</span>':`<span class="tom-badge ${tom.cls}">${tom.label}</span>`;
+    const availHtml=u.removed?`<span class="avail-badge gone">Rented</span>`:`<span class="avail-badge ${availClass(u.availability||'')}">${u.availability}</span>`;
+    const isWatched=watchlist.has(u.unit);
+    const starHtml=u.removed?'':`<button class="track-btn${isWatched?' tracked':''}" onclick="toggleWatch('${u.unit}',event)" title="${isWatched?'Untrack':'Track'} unit ${u.unit}">${isWatched?'&#9733;':'&#9734;'}</button>`;
+    return `<tr${u.removed?' class="removed-row"':''}>
+      <td class="unit-num">${u.unit}${u.removed?' <span style="font-size:10px;color:#d97706;font-weight:400">[removed]</span>':''}</td>
+      <td style="color:#6b7280;font-size:12px">${u.floorplan}</td>
+      <td>${bedBadge(u.beds)}</td>
+      <td style="color:#6b7280">${u.sqft.toLocaleString()}</td>
+      <td class="price-col">$${u.price.toLocaleString()}</td>
+      <td style="color:#9ca3af;font-size:12px">$${(u.price/u.sqft).toFixed(2)}</td>
+      <td>${totalChangeHtml}</td>
+      <td>${tomHtml}</td>
+      <td>${availHtml}</td>
+      <td style="text-align:center">${starHtml}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ── WATCHLIST ─────────────────────────────────────────────────────────────────
+function toggleWatch(unitId, e) {
+  e && e.stopPropagation();
+  if(watchlist.has(unitId)) watchlist.delete(unitId);
+  else watchlist.add(unitId);
+  renderTable();
+  renderWatchlist();
+}
+function clearWatchlist() {
+  watchlist.clear();
+  renderTable();
+  renderWatchlist();
+}
+function renderWatchlist() {
+  const count=watchlist.size;
+  document.getElementById('watchlistCount').textContent=count+' tracked';
+  const container=document.getElementById('watchlistUnits');
+  if(count===0){ container.innerHTML='<div class="watchlist-empty" id="watchlistEmpty">Star (&#9734;) any unit in the table above to begin tracking it here.</div>'; return; }
+  container.innerHTML=[...watchlist].map(uid=>{
+    const u=activeUnits.find(a=>a.unit===uid);
+    if(!u) return '';
+    const delta=firstPriceMap[uid]?firstPriceMap[uid]-u.price:0;
+    return `<div class="watchlist-chip">
+      <div>
+        <div class="chip-unit">Unit ${u.unit}</div>
+        <div class="chip-info">FP ${u.floorplan} &middot; ${u.beds} &middot; ${u.sqft} sqft</div>
+      </div>
+      <div>
+        <div class="chip-price">$${u.price.toLocaleString()}/mo</div>
+        ${delta>0?`<div style="font-size:11px;color:#166534">&#9660; $${delta.toLocaleString()} saved</div>`:''}
+      </div>
+      <div style="color:#6b7280;font-size:12px">${u.availability}</div>
+      <button class="chip-remove" onclick="toggleWatch('${uid}',event)" title="Remove">&times;</button>
+    </div>`;
+  }).join('');
+}
+
+// ── ALERT PREFERENCES ─────────────────────────────────────────────────────────
+function setScope(scope, updateUI=true) {
+  alertScope=scope;
+  document.getElementById('scopeWatched').classList.toggle('active',scope==='watched');
+  document.getElementById('scopeAll').classList.toggle('active',scope==='all');
+}
+function saveAlertPrefs() {
+  const email=document.getElementById('alertEmail').value.trim();
+  if(!email){alert('Please enter an email address.');return;}
+  const units=[...watchlist];
+  const status=document.getElementById('alertStatus');
+  if(alertScope==='watched'&&units.length===0){
+    status.textContent='No units tracked — star some units first, or switch to "All price drops".';
+    status.className='alert-status show'; status.style.color='#92400e'; return;
+  }
+  const updated={...RAW_DATA, watchlist:units, alertScope, alertEmail:email};
+  const blob=new Blob([JSON.stringify(updated,null,2)],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='kurve_data.json'; a.click();
+  status.style.color='#166534';
+  status.textContent='Preferences saved — replace your kurve_data.json with the downloaded file. The tracker will pick up your watchlist on the next run.';
+  status.className='alert-status show';
+}
+
+// ── CHARTS ────────────────────────────────────────────────────────────────────
+const GRID={
+  x:{ticks:{color:'#9ca3af'},grid:{color:'#f3f4f6'}},
+  y:{ticks:{color:'#9ca3af'},grid:{color:'#f3f4f6'}}
+};
+const CO={Studio:'#5b21b6','1 Bed':'#1e3a8a','2 Bed':'#065f46'};
+const BASE={
+  responsive:true, maintainAspectRatio:false,
+  plugins:{legend:{labels:{color:'#6b7280',font:{size:11,family:'Inter'}}}}
+};
+
+function buildCharts(latest) {
+  const types=['Studio','1 Bed','2 Bed'];
+  const tUnits=t=>{const a=[];latest.floorplans.filter(f=>f.beds===t).forEach(f=>f.units.forEach(u=>a.push(u.price)));return a;};
+  new Chart(document.getElementById('priceRangeChart'),{type:'bar',data:{labels:types,datasets:[
+    {label:'Min',data:types.map(t=>{const a=tUnits(t);return a.length?Math.min(...a):0;}),backgroundColor:['rgba(91,33,182,0.6)','rgba(30,58,138,0.6)','rgba(6,95,70,0.6)']},
+    {label:'Max',data:types.map(t=>{const a=tUnits(t);return a.length?Math.max(...a):0;}),backgroundColor:['rgba(91,33,182,0.25)','rgba(30,58,138,0.25)','rgba(6,95,70,0.25)']}
+  ]},options:{...BASE,scales:{...GRID,y:{...GRID.y,ticks:{...GRID.y.ticks,callback:v=>'$'+v.toLocaleString()}}}}});
+
+  const bkts={};
+  activeUnits.forEach(u=>{const b=Math.floor(u.price/500)*500;bkts[b]=(bkts[b]||0)+1;});
+  const bK=Object.keys(bkts).sort((a,b)=>a-b);
+  new Chart(document.getElementById('distChart'),{type:'bar',data:{labels:bK.map(b=>'$'+parseInt(b).toLocaleString()+'+'),datasets:[{label:'Units',data:bK.map(b=>bkts[b]),backgroundColor:'rgba(30,58,138,0.5)',borderColor:'rgba(30,58,138,0.8)',borderWidth:1}]},options:{...BASE,plugins:{legend:{display:false}},scales:GRID}});
+
+  const fpS=[...latest.floorplans].sort((a,b)=>b.availableUnits-a.availableUnits).slice(0,14);
+  new Chart(document.getElementById('availChart'),{type:'bar',data:{labels:fpS.map(f=>f.floorplan),datasets:[{label:'Units',data:fpS.map(f=>f.availableUnits),backgroundColor:fpS.map(f=>{const c=CO[f.beds];return c+'99';}),borderColor:fpS.map(f=>CO[f.beds]),borderWidth:1}]},options:{...BASE,plugins:{legend:{display:false}},scales:{...GRID,x:{...GRID.x,ticks:{...GRID.x.ticks,font:{size:10}}}}}});
+
+  const ppsfAvg=types.map(t=>{const a=activeUnits.filter(u=>u.beds===t);return a.length?(a.reduce((s,u)=>s+(u.price/u.sqft),0)/a.length).toFixed(2):0;});
+  new Chart(document.getElementById('ppsfChart'),{type:'bar',data:{labels:types,datasets:[{label:'Avg $/sqft',data:ppsfAvg,backgroundColor:['rgba(91,33,182,0.5)','rgba(30,58,138,0.5)','rgba(6,95,70,0.5)'],borderColor:['#5b21b6','#1e3a8a','#065f46'],borderWidth:1}]},options:{...BASE,plugins:{legend:{display:false}},scales:{...GRID,y:{...GRID.y,ticks:{...GRID.y.ticks,callback:v=>'$'+v+'/sf'}}}}});
+}
+
+function buildTrendChart(snaps) {
+  const labels=snaps.map(s=>{const d=new Date(s.timestamp);return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});});
+  const types=['Studio','1 Bed','2 Bed'];
+  const colors=['#5b21b6','#1e3a8a','#065f46'];
+  const datasets=types.map((t,i)=>({
+    label:t,
+    data:snaps.map(s=>{const a=[];s.floorplans.filter(f=>f.beds===t).forEach(f=>f.units.forEach(u=>a.push(u.price)));return a.length?Math.round(a.reduce((x,y)=>x+y,0)/a.length):null;}),
+    borderColor:colors[i],backgroundColor:colors[i]+'18',tension:0.3,pointRadius:5,fill:false,spanGaps:true
+  }));
+  new Chart(document.getElementById('trendChart'),{type:'line',data:{labels,datasets},options:{...BASE,plugins:{legend:{labels:{color:'#6b7280',font:{size:12,family:'Inter'}}}},scales:{...GRID,y:{...GRID.y,ticks:{...GRID.y.ticks,callback:v=>'$'+v.toLocaleString()}}}}});
+}
+
+function buildHistorySection(snaps) {
+  const allFPs=[...new Set(snaps.flatMap(s=>s.floorplans.map(f=>f.floorplan)))].sort();
+  const row=document.getElementById('fpSelectRow');
+  row.innerHTML=allFPs.map((fp,i)=>`<button class="fp-btn${i===0?' active':''}" onclick="showHistory('${fp}',this)">${fp}</button>`).join('');
+  showHistory(allFPs[0],row.querySelector('.fp-btn'));
+}
+
+function showHistory(fpName,btn) {
+  document.querySelectorAll('.fp-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const snaps=RAW_DATA.snapshots;
+  const labels=snaps.map(s=>{const d=new Date(s.timestamp);return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});});
+  const unitIds=[...new Set(snaps.flatMap(s=>{const fp=s.floorplans.find(f=>f.floorplan===fpName);return fp?fp.units.map(u=>u.unit):[];}))];
+  const datasets=unitIds.map(uid=>{
+    const data=snaps.map(s=>{const fp=s.floorplans.find(f=>f.floorplan===fpName);if(!fp)return null;const u=fp.units.find(u=>u.unit===uid);return u?u.price:null;});
+    const h=parseInt(uid)%360;
+    return {label:'Unit '+uid,data,borderColor:`hsl(${h},55%,42%)`,backgroundColor:`hsl(${h},55%,42%)18`,tension:0.3,spanGaps:true,pointRadius:6,borderWidth:2};
+  });
+  if(histChart) histChart.destroy();
+  histChart=new Chart(document.getElementById('historyCanvas'),{type:'line',data:{labels,datasets},options:{...BASE,plugins:{legend:{labels:{color:'#6b7280',font:{size:12,family:'Inter'}}}},scales:{...GRID,y:{...GRID.y,ticks:{...GRID.y.ticks,callback:v=>'$'+v.toLocaleString()}}}}});
+}
+
+// ── CHANGES SECTION ───────────────────────────────────────────────────────────
+function buildChangesSection(snaps) {
+  const first=snaps[0],latest=snaps[snaps.length-1];
+  const firstMap={},firstFPMap={};
+  first.floorplans.forEach(fp=>fp.units.forEach(u=>{firstMap[u.unit]=u.price;firstFPMap[u.unit]={fp:fp.floorplan,beds:fp.beds};}));
+  const drops=[],rises=[],newUnits=[],removed=[];
+  latest.floorplans.forEach(fp=>fp.units.forEach(u=>{
+    if(firstMap[u.unit]!==undefined){
+      if(u.price<firstMap[u.unit]) drops.push({unit:u.unit,fp:fp.floorplan,beds:fp.beds,old:firstMap[u.unit],curr:u.price,delta:firstMap[u.unit]-u.price});
+      else if(u.price>firstMap[u.unit]) rises.push({unit:u.unit,fp:fp.floorplan,beds:fp.beds,old:firstMap[u.unit],curr:u.price,delta:u.price-firstMap[u.unit]});
+    } else {
+      newUnits.push({unit:u.unit,fp:fp.floorplan,beds:fp.beds,price:u.price,availability:u.availability});
+    }
+  }));
+  removedUnits.forEach(u=>removed.push({unit:u.unit,fp:u.floorplan,beds:u.beds,price:firstPriceMap[u.unit]||u.price}));
+  drops.sort((a,b)=>b.delta-a.delta);
+  const grp=(cls,title,items,fn)=>`<div class="change-group ${cls}"><h4>${title} (${items.length})</h4>${items.length?items.map(fn).join(''):'<div class="no-change">None</div>'}</div>`;
+  document.getElementById('changesGrid').innerHTML=
+    grp('drops','Price Drops',drops,d=>`<div class="change-row"><span class="unit-info"><strong>Unit ${d.unit}</strong> &middot; FP ${d.fp} &middot; ${d.beds}</span><span class="delta green">&minus;$${d.delta.toLocaleString()}/mo<br><small style="font-size:10px;color:#9ca3af">$${d.old.toLocaleString()} &rarr; $${d.curr.toLocaleString()}</small></span></div>`)+
+    grp('new-units','New Listings',newUnits,u=>`<div class="change-row"><span class="unit-info"><strong>Unit ${u.unit}</strong> &middot; FP ${u.fp} &middot; ${u.beds}</span><span class="delta blue">$${u.price.toLocaleString()}/mo<br><small style="font-size:10px;color:#9ca3af">${u.availability}</small></span></div>`)+
+    grp('removed','Rented / Removed',removed,u=>`<div class="change-row"><span class="unit-info"><strong>Unit ${u.unit}</strong> &middot; FP ${u.fp}</span><span class="delta orange">Rented<br><small style="font-size:10px;color:#9ca3af">was $${u.price.toLocaleString()}</small></span></div>`)+
+    grp('rises','Price Increases',rises,d=>`<div class="change-row"><span class="unit-info"><strong>Unit ${d.unit}</strong> &middot; FP ${d.fp}</span><span class="delta red">+$${d.delta.toLocaleString()}/mo<br><small style="font-size:10px;color:#9ca3af">$${d.old.toLocaleString()} &rarr; $${d.curr.toLocaleString()}</small></span></div>`);
+}
+
+async function loadDashboard() {
+  try {
+    const res = await fetch('kurve_data.json?nocache=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    RAW_DATA = await res.json();
+    alertScope = RAW_DATA.alertScope || 'all';
+    init();
+  } catch(e) {
+    console.error('Failed to load kurve_data.json:', e);
+    document.body.innerHTML = '<div style="color:#fff;text-align:center;padding:80px 20px;font-family:Inter,sans-serif">'
+      + '<h2>⚠️ Could not load data</h2>'
+      + '<p style="margin-top:12px;color:rgba(255,255,255,0.6)">Make sure <code>kurve_data.json</code> is in the same folder as this HTML file.</p>'
+      + '<p style="margin-top:8px;color:rgba(255,255,255,0.4);font-size:12px">Error: ' + e.message + '</p></div>';
+  }
+}
+
+loadDashboard();
+</script>
+</body>
+</html>

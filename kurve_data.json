@@ -1,0 +1,2936 @@
+{
+  "property": "Kurve",
+  "url": "https://www.apartments.com/kurve-los-angeles-ca/047tn61/",
+  "address": "2801 Sunset Pl, Los Angeles, CA 90005",
+  "snapshots": [
+    {
+      "timestamp": "2026-03-10T00:00:00-07:00",
+      "floorplans": [
+        {
+          "floorplan": "62.3",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 529,
+          "deposit": 750,
+          "minPrice": 2099,
+          "maxPrice": 2099,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "164",
+              "price": 2099,
+              "sqft": 529,
+              "availability": "Apr 5"
+            }
+          ]
+        },
+        {
+          "floorplan": "43",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 575,
+          "deposit": 750,
+          "minPrice": 2139,
+          "maxPrice": 2139,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "139",
+              "price": 2139,
+              "sqft": 575,
+              "availability": "Apr 20"
+            }
+          ]
+        },
+        {
+          "floorplan": "42.2",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 591,
+          "deposit": 750,
+          "minPrice": 2149,
+          "maxPrice": 2424,
+          "availableUnits": 4,
+          "units": [
+            {
+              "unit": "127",
+              "price": 2149,
+              "sqft": 591,
+              "availability": "Now"
+            },
+            {
+              "unit": "140",
+              "price": 2199,
+              "sqft": 591,
+              "availability": "Now"
+            },
+            {
+              "unit": "229",
+              "price": 2249,
+              "sqft": 591,
+              "availability": "May 27"
+            },
+            {
+              "unit": "529",
+              "price": 2424,
+              "sqft": 591,
+              "availability": "Jun 1"
+            }
+          ]
+        },
+        {
+          "floorplan": "43.4",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 600,
+          "deposit": 750,
+          "minPrice": 2189,
+          "maxPrice": 2189,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "141",
+              "price": 2189,
+              "sqft": 600,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "42.3",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 600,
+          "deposit": 750,
+          "minPrice": 2169,
+          "maxPrice": 2169,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "142",
+              "price": 2169,
+              "sqft": 600,
+              "availability": "Apr 24"
+            }
+          ]
+        },
+        {
+          "floorplan": "43.2",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 591,
+          "deposit": 750,
+          "minPrice": 2179,
+          "maxPrice": 2209,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "428",
+              "price": 2209,
+              "sqft": 591,
+              "availability": "Jun 1"
+            },
+            {
+              "unit": "228",
+              "price": 2179,
+              "sqft": 591,
+              "availability": "Jun 8"
+            }
+          ]
+        },
+        {
+          "floorplan": "53.1",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 585,
+          "deposit": 750,
+          "minPrice": 2188,
+          "maxPrice": 2188,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "256",
+              "price": 2188,
+              "sqft": 585,
+              "availability": "May 14"
+            }
+          ]
+        },
+        {
+          "floorplan": "15",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 612,
+          "deposit": 750,
+          "minPrice": 2939,
+          "maxPrice": 3238,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "2115",
+              "price": 3238,
+              "sqft": 612,
+              "availability": "Now"
+            },
+            {
+              "unit": "1915",
+              "price": 2939,
+              "sqft": 612,
+              "availability": "May 21"
+            }
+          ]
+        },
+        {
+          "floorplan": "23",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 695,
+          "deposit": 750,
+          "minPrice": 2999,
+          "maxPrice": 2999,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2023",
+              "price": 2999,
+              "sqft": 695,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "13",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 684,
+          "deposit": 750,
+          "minPrice": 3044,
+          "maxPrice": 3044,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1913",
+              "price": 3044,
+              "sqft": 684,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "12",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 692,
+          "deposit": 750,
+          "minPrice": 3315,
+          "maxPrice": 3315,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2112",
+              "price": 3315,
+              "sqft": 692,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.3",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 764,
+          "deposit": 750,
+          "minPrice": 2528,
+          "maxPrice": 2738,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "149",
+              "price": 2528,
+              "sqft": 764,
+              "availability": "Now"
+            },
+            {
+              "unit": "552",
+              "price": 2738,
+              "sqft": 764,
+              "availability": "May 21"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.2",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 763,
+          "deposit": 750,
+          "minPrice": 2543,
+          "maxPrice": 2543,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "252",
+              "price": 2543,
+              "sqft": 763,
+              "availability": "Apr 8"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.5",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 773,
+          "deposit": 750,
+          "minPrice": 2613,
+          "maxPrice": 2613,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "347",
+              "price": 2613,
+              "sqft": 773,
+              "availability": "May 18"
+            }
+          ]
+        },
+        {
+          "floorplan": "L17",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 762,
+          "deposit": 750,
+          "minPrice": 2867,
+          "maxPrice": 2867,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "217",
+              "price": 2867,
+              "sqft": 762,
+              "availability": "May 10"
+            }
+          ]
+        },
+        {
+          "floorplan": "L14",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 779,
+          "deposit": 750,
+          "minPrice": 2877,
+          "maxPrice": 2877,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "214",
+              "price": 2877,
+              "sqft": 779,
+              "availability": "Apr 21"
+            }
+          ]
+        },
+        {
+          "floorplan": "18",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 855,
+          "deposit": 750,
+          "minPrice": 3503,
+          "maxPrice": 3503,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1118",
+              "price": 3503,
+              "sqft": 855,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "18.1",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 798,
+          "deposit": 750,
+          "minPrice": 3453,
+          "maxPrice": 3453,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "618",
+              "price": 3453,
+              "sqft": 798,
+              "availability": "May 22"
+            }
+          ]
+        },
+        {
+          "floorplan": "8",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 917,
+          "deposit": 750,
+          "minPrice": 3563,
+          "maxPrice": 3563,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1608",
+              "price": 3563,
+              "sqft": 917,
+              "availability": "Apr 22"
+            }
+          ]
+        },
+        {
+          "floorplan": "21",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 891,
+          "deposit": 750,
+          "minPrice": 3618,
+          "maxPrice": 4083,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "2121",
+              "price": 4083,
+              "sqft": 891,
+              "availability": "May 7"
+            },
+            {
+              "unit": "1821",
+              "price": 3618,
+              "sqft": 891,
+              "availability": "May 14"
+            }
+          ]
+        },
+        {
+          "floorplan": "4",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 751,
+          "deposit": 750,
+          "minPrice": 3582,
+          "maxPrice": 3582,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2204",
+              "price": 3582,
+              "sqft": 751,
+              "availability": "May 1"
+            }
+          ]
+        },
+        {
+          "floorplan": "6",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 756,
+          "deposit": 750,
+          "minPrice": 3747,
+          "maxPrice": 3747,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2106",
+              "price": 3747,
+              "sqft": 756,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "20",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 798,
+          "deposit": 750,
+          "minPrice": 3787,
+          "maxPrice": 3787,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2120",
+              "price": 3787,
+              "sqft": 798,
+              "availability": "Apr 9"
+            }
+          ]
+        },
+        {
+          "floorplan": "19",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 848,
+          "deposit": 750,
+          "minPrice": 3797,
+          "maxPrice": 3797,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2119",
+              "price": 3797,
+              "sqft": 848,
+              "availability": "Jul 18"
+            }
+          ]
+        },
+        {
+          "floorplan": "1",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 1016,
+          "deposit": 750,
+          "minPrice": 4273,
+          "maxPrice": 4273,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2101",
+              "price": 4273,
+              "sqft": 1016,
+              "availability": "Apr 2"
+            }
+          ]
+        },
+        {
+          "floorplan": "11.1",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1243,
+          "deposit": 750,
+          "minPrice": 4247,
+          "maxPrice": 4447,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "711",
+              "price": 4247,
+              "sqft": 1243,
+              "availability": "Now"
+            },
+            {
+              "unit": "1011",
+              "price": 4447,
+              "sqft": 1243,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "17",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1116,
+          "deposit": 750,
+          "minPrice": 4187,
+          "maxPrice": 4187,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1217",
+              "price": 4187,
+              "sqft": 1116,
+              "availability": "May 8"
+            }
+          ]
+        },
+        {
+          "floorplan": "L25",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1331,
+          "deposit": 750,
+          "minPrice": 4519,
+          "maxPrice": 4534,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "425",
+              "price": 4519,
+              "sqft": 1331,
+              "availability": "May 5"
+            },
+            {
+              "unit": "525",
+              "price": 4534,
+              "sqft": 1331,
+              "availability": "May 7"
+            }
+          ]
+        },
+        {
+          "floorplan": "26",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1342,
+          "deposit": 750,
+          "minPrice": 4952,
+          "maxPrice": 4952,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1826",
+              "price": 4952,
+              "sqft": 1342,
+              "availability": "Now"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-17T00:00:00-07:00",
+      "floorplans": [
+        {
+          "floorplan": "62.3",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 529,
+          "deposit": 750,
+          "minPrice": 2079,
+          "maxPrice": 2079,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "164",
+              "price": 2079,
+              "sqft": 529,
+              "availability": "Apr 1"
+            }
+          ]
+        },
+        {
+          "floorplan": "43",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 575,
+          "deposit": 750,
+          "minPrice": 2109,
+          "maxPrice": 2109,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "139",
+              "price": 2109,
+              "sqft": 575,
+              "availability": "Apr 15"
+            }
+          ]
+        },
+        {
+          "floorplan": "42.2",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 591,
+          "deposit": 750,
+          "minPrice": 2149,
+          "maxPrice": 2374,
+          "availableUnits": 3,
+          "units": [
+            {
+              "unit": "140",
+              "price": 2149,
+              "sqft": 591,
+              "availability": "Now"
+            },
+            {
+              "unit": "229",
+              "price": 2179,
+              "sqft": 591,
+              "availability": "May 22"
+            },
+            {
+              "unit": "529",
+              "price": 2374,
+              "sqft": 591,
+              "availability": "May 26"
+            }
+          ]
+        },
+        {
+          "floorplan": "43.4",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 600,
+          "deposit": 750,
+          "minPrice": 2149,
+          "maxPrice": 2149,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "141",
+              "price": 2149,
+              "sqft": 600,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "42.3",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 600,
+          "deposit": 750,
+          "minPrice": 2139,
+          "maxPrice": 2139,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "142",
+              "price": 2139,
+              "sqft": 600,
+              "availability": "Apr 18"
+            }
+          ]
+        },
+        {
+          "floorplan": "43.2",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 591,
+          "deposit": 750,
+          "minPrice": 2149,
+          "maxPrice": 2179,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "428",
+              "price": 2179,
+              "sqft": 591,
+              "availability": "May 25"
+            },
+            {
+              "unit": "228",
+              "price": 2149,
+              "sqft": 591,
+              "availability": "Jun 2"
+            }
+          ]
+        },
+        {
+          "floorplan": "53.1",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 585,
+          "deposit": 750,
+          "minPrice": 2158,
+          "maxPrice": 2158,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "256",
+              "price": 2158,
+              "sqft": 585,
+              "availability": "May 9"
+            }
+          ]
+        },
+        {
+          "floorplan": "15",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 612,
+          "deposit": 750,
+          "minPrice": 2869,
+          "maxPrice": 3188,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "2115",
+              "price": 3188,
+              "sqft": 612,
+              "availability": "Now"
+            },
+            {
+              "unit": "1915",
+              "price": 2869,
+              "sqft": 612,
+              "availability": "May 15"
+            }
+          ]
+        },
+        {
+          "floorplan": "23",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 695,
+          "deposit": 750,
+          "minPrice": 2949,
+          "maxPrice": 2949,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2023",
+              "price": 2949,
+              "sqft": 695,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "13",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 684,
+          "deposit": 750,
+          "minPrice": 2994,
+          "maxPrice": 2994,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1913",
+              "price": 2994,
+              "sqft": 684,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "12",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 692,
+          "deposit": 750,
+          "minPrice": 3265,
+          "maxPrice": 3265,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2112",
+              "price": 3265,
+              "sqft": 692,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.3",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 764,
+          "deposit": 750,
+          "minPrice": 2478,
+          "maxPrice": 2688,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "149",
+              "price": 2478,
+              "sqft": 764,
+              "availability": "Now"
+            },
+            {
+              "unit": "552",
+              "price": 2688,
+              "sqft": 764,
+              "availability": "May 15"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.2",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 763,
+          "deposit": 750,
+          "minPrice": 2493,
+          "maxPrice": 2493,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "252",
+              "price": 2493,
+              "sqft": 763,
+              "availability": "Apr 3"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.5",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 773,
+          "deposit": 750,
+          "minPrice": 2563,
+          "maxPrice": 2563,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "347",
+              "price": 2563,
+              "sqft": 773,
+              "availability": "May 12"
+            }
+          ]
+        },
+        {
+          "floorplan": "L17",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 762,
+          "deposit": 750,
+          "minPrice": 2817,
+          "maxPrice": 2817,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "217",
+              "price": 2817,
+              "sqft": 762,
+              "availability": "May 6"
+            }
+          ]
+        },
+        {
+          "floorplan": "L14",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 779,
+          "deposit": 750,
+          "minPrice": 2827,
+          "maxPrice": 2827,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "214",
+              "price": 2827,
+              "sqft": 779,
+              "availability": "Apr 17"
+            }
+          ]
+        },
+        {
+          "floorplan": "18",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 855,
+          "deposit": 750,
+          "minPrice": 3403,
+          "maxPrice": 3403,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1118",
+              "price": 3403,
+              "sqft": 855,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "18.1",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 798,
+          "deposit": 750,
+          "minPrice": 3403,
+          "maxPrice": 3403,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "618",
+              "price": 3403,
+              "sqft": 798,
+              "availability": "May 18"
+            }
+          ]
+        },
+        {
+          "floorplan": "8",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 917,
+          "deposit": 750,
+          "minPrice": 3463,
+          "maxPrice": 3463,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1608",
+              "price": 3463,
+              "sqft": 917,
+              "availability": "Apr 18"
+            }
+          ]
+        },
+        {
+          "floorplan": "21",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 891,
+          "deposit": 750,
+          "minPrice": 3548,
+          "maxPrice": 4033,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "2121",
+              "price": 4033,
+              "sqft": 891,
+              "availability": "May 2"
+            },
+            {
+              "unit": "1821",
+              "price": 3548,
+              "sqft": 891,
+              "availability": "May 9"
+            }
+          ]
+        },
+        {
+          "floorplan": "4",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 751,
+          "deposit": 750,
+          "minPrice": 3532,
+          "maxPrice": 3532,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2204",
+              "price": 3532,
+              "sqft": 751,
+              "availability": "Apr 27"
+            }
+          ]
+        },
+        {
+          "floorplan": "6",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 756,
+          "deposit": 750,
+          "minPrice": 3697,
+          "maxPrice": 3697,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2106",
+              "price": 3697,
+              "sqft": 756,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "20",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 798,
+          "deposit": 750,
+          "minPrice": 3737,
+          "maxPrice": 3737,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2120",
+              "price": 3737,
+              "sqft": 798,
+              "availability": "Apr 5"
+            }
+          ]
+        },
+        {
+          "floorplan": "19",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 848,
+          "deposit": 750,
+          "minPrice": 3747,
+          "maxPrice": 3747,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2119",
+              "price": 3747,
+              "sqft": 848,
+              "availability": "Jul 14"
+            }
+          ]
+        },
+        {
+          "floorplan": "1",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 1016,
+          "deposit": 750,
+          "minPrice": 4223,
+          "maxPrice": 4223,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2101",
+              "price": 4223,
+              "sqft": 1016,
+              "availability": "Mar 29"
+            }
+          ]
+        },
+        {
+          "floorplan": "11.1",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1243,
+          "deposit": 750,
+          "minPrice": 4147,
+          "maxPrice": 4357,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "711",
+              "price": 4147,
+              "sqft": 1243,
+              "availability": "Now"
+            },
+            {
+              "unit": "1011",
+              "price": 4357,
+              "sqft": 1243,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "17",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1116,
+          "deposit": 750,
+          "minPrice": 4137,
+          "maxPrice": 4137,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1217",
+              "price": 4137,
+              "sqft": 1116,
+              "availability": "May 4"
+            }
+          ]
+        },
+        {
+          "floorplan": "L25",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1331,
+          "deposit": 750,
+          "minPrice": 4469,
+          "maxPrice": 4484,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "425",
+              "price": 4469,
+              "sqft": 1331,
+              "availability": "May 1"
+            },
+            {
+              "unit": "525",
+              "price": 4484,
+              "sqft": 1331,
+              "availability": "May 3"
+            }
+          ]
+        },
+        {
+          "floorplan": "26",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1342,
+          "deposit": 750,
+          "minPrice": 4862,
+          "maxPrice": 4862,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1826",
+              "price": 4862,
+              "sqft": 1342,
+              "availability": "Now"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-24T12:00:00-07:00",
+      "floorplans": [
+        {
+          "floorplan": "62.3",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 529,
+          "deposit": 750,
+          "minPrice": 2069,
+          "maxPrice": 2069,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "164",
+              "price": 2069,
+              "sqft": 529,
+              "availability": "Mar 30"
+            }
+          ]
+        },
+        {
+          "floorplan": "43",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 575,
+          "deposit": 750,
+          "minPrice": 2089,
+          "maxPrice": 2089,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "139",
+              "price": 2089,
+              "sqft": 575,
+              "availability": "Apr 13"
+            }
+          ]
+        },
+        {
+          "floorplan": "42.2",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 591,
+          "deposit": 750,
+          "minPrice": 2109,
+          "maxPrice": 2324,
+          "availableUnits": 3,
+          "units": [
+            {
+              "unit": "140",
+              "price": 2109,
+              "sqft": 591,
+              "availability": "Now"
+            },
+            {
+              "unit": "229",
+              "price": 2129,
+              "sqft": 591,
+              "availability": "May 19"
+            },
+            {
+              "unit": "529",
+              "price": 2324,
+              "sqft": 591,
+              "availability": "May 23"
+            }
+          ]
+        },
+        {
+          "floorplan": "43.4",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 600,
+          "deposit": 750,
+          "minPrice": 2119,
+          "maxPrice": 2119,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "141",
+              "price": 2119,
+              "sqft": 600,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "42.3",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 600,
+          "deposit": 750,
+          "minPrice": 2119,
+          "maxPrice": 2119,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "142",
+              "price": 2119,
+              "sqft": 600,
+              "availability": "Apr 16"
+            }
+          ]
+        },
+        {
+          "floorplan": "43.2",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 591,
+          "deposit": 750,
+          "minPrice": 2129,
+          "maxPrice": 2159,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "428",
+              "price": 2159,
+              "sqft": 591,
+              "availability": "May 22"
+            },
+            {
+              "unit": "228",
+              "price": 2129,
+              "sqft": 591,
+              "availability": "May 31"
+            }
+          ]
+        },
+        {
+          "floorplan": "53.1",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 585,
+          "deposit": 750,
+          "minPrice": 2138,
+          "maxPrice": 2138,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "256",
+              "price": 2138,
+              "sqft": 585,
+              "availability": "May 6"
+            }
+          ]
+        },
+        {
+          "floorplan": "15",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 612,
+          "deposit": 750,
+          "minPrice": 2809,
+          "maxPrice": 3138,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "2115",
+              "price": 3138,
+              "sqft": 612,
+              "availability": "Now"
+            },
+            {
+              "unit": "1915",
+              "price": 2809,
+              "sqft": 612,
+              "availability": "May 13"
+            }
+          ]
+        },
+        {
+          "floorplan": "23",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 695,
+          "deposit": 750,
+          "minPrice": 2899,
+          "maxPrice": 2899,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2023",
+              "price": 2899,
+              "sqft": 695,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "13",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 684,
+          "deposit": 750,
+          "minPrice": 2944,
+          "maxPrice": 2944,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1913",
+              "price": 2944,
+              "sqft": 684,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "12",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 692,
+          "deposit": 750,
+          "minPrice": 3215,
+          "maxPrice": 3215,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2112",
+              "price": 3215,
+              "sqft": 692,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.3",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 764,
+          "deposit": 750,
+          "minPrice": 2428,
+          "maxPrice": 2638,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "149",
+              "price": 2428,
+              "sqft": 764,
+              "availability": "Now"
+            },
+            {
+              "unit": "552",
+              "price": 2638,
+              "sqft": 764,
+              "availability": "May 13"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.2",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 763,
+          "deposit": 750,
+          "minPrice": 2443,
+          "maxPrice": 2443,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "252",
+              "price": 2443,
+              "sqft": 763,
+              "availability": "Apr 1"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.5",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 773,
+          "deposit": 750,
+          "minPrice": 2513,
+          "maxPrice": 2513,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "347",
+              "price": 2513,
+              "sqft": 773,
+              "availability": "May 10"
+            }
+          ]
+        },
+        {
+          "floorplan": "L17",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 762,
+          "deposit": 750,
+          "minPrice": 2767,
+          "maxPrice": 2767,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "217",
+              "price": 2767,
+              "sqft": 762,
+              "availability": "May 3"
+            }
+          ]
+        },
+        {
+          "floorplan": "L14",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 779,
+          "deposit": 750,
+          "minPrice": 2777,
+          "maxPrice": 2777,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "214",
+              "price": 2777,
+              "sqft": 779,
+              "availability": "Apr 14"
+            }
+          ]
+        },
+        {
+          "floorplan": "18",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 855,
+          "deposit": 750,
+          "minPrice": 3353,
+          "maxPrice": 3353,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1118",
+              "price": 3353,
+              "sqft": 855,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "18.1",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 798,
+          "deposit": 750,
+          "minPrice": 3353,
+          "maxPrice": 3353,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "618",
+              "price": 3353,
+              "sqft": 798,
+              "availability": "May 15"
+            }
+          ]
+        },
+        {
+          "floorplan": "8",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 917,
+          "deposit": 750,
+          "minPrice": 3413,
+          "maxPrice": 3413,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1608",
+              "price": 3413,
+              "sqft": 917,
+              "availability": "Apr 15"
+            }
+          ]
+        },
+        {
+          "floorplan": "21",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 891,
+          "deposit": 750,
+          "minPrice": 3478,
+          "maxPrice": 3983,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "2121",
+              "price": 3983,
+              "sqft": 891,
+              "availability": "Apr 30"
+            },
+            {
+              "unit": "1821",
+              "price": 3478,
+              "sqft": 891,
+              "availability": "May 6"
+            }
+          ]
+        },
+        {
+          "floorplan": "4",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 751,
+          "deposit": 750,
+          "minPrice": 3482,
+          "maxPrice": 3482,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2204",
+              "price": 3482,
+              "sqft": 751,
+              "availability": "Apr 24"
+            }
+          ]
+        },
+        {
+          "floorplan": "6",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 756,
+          "deposit": 750,
+          "minPrice": 3647,
+          "maxPrice": 3647,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2106",
+              "price": 3647,
+              "sqft": 756,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "20",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 798,
+          "deposit": 750,
+          "minPrice": 3687,
+          "maxPrice": 3687,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2120",
+              "price": 3687,
+              "sqft": 798,
+              "availability": "Apr 2"
+            }
+          ]
+        },
+        {
+          "floorplan": "19",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 848,
+          "deposit": 750,
+          "minPrice": 3697,
+          "maxPrice": 3697,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2119",
+              "price": 3697,
+              "sqft": 848,
+              "availability": "Jul 11"
+            }
+          ]
+        },
+        {
+          "floorplan": "1",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 1016,
+          "deposit": 750,
+          "minPrice": 4173,
+          "maxPrice": 4173,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2101",
+              "price": 4173,
+              "sqft": 1016,
+              "availability": "Mar 26"
+            }
+          ]
+        },
+        {
+          "floorplan": "11.1",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1243,
+          "deposit": 750,
+          "minPrice": 4047,
+          "maxPrice": 4267,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "711",
+              "price": 4047,
+              "sqft": 1243,
+              "availability": "Now"
+            },
+            {
+              "unit": "1011",
+              "price": 4267,
+              "sqft": 1243,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "17",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1116,
+          "deposit": 750,
+          "minPrice": 4087,
+          "maxPrice": 4087,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1217",
+              "price": 4087,
+              "sqft": 1116,
+              "availability": "May 1"
+            }
+          ]
+        },
+        {
+          "floorplan": "L25",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1331,
+          "deposit": 750,
+          "minPrice": 4419,
+          "maxPrice": 4434,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "425",
+              "price": 4419,
+              "sqft": 1331,
+              "availability": "Apr 28"
+            },
+            {
+              "unit": "525",
+              "price": 4434,
+              "sqft": 1331,
+              "availability": "Apr 30"
+            }
+          ]
+        },
+        {
+          "floorplan": "26",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1342,
+          "deposit": 750,
+          "minPrice": 4762,
+          "maxPrice": 4762,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1826",
+              "price": 4762,
+              "sqft": 1342,
+              "availability": "Now"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-24T18:06:33-07:00",
+      "floorplans": [
+        {
+          "floorplan": "62.3",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 529,
+          "deposit": 750,
+          "minPrice": 2069,
+          "maxPrice": 2069,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "164",
+              "price": 2069,
+              "sqft": 529,
+              "availability": "Mar 30"
+            }
+          ]
+        },
+        {
+          "floorplan": "43",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 575,
+          "deposit": 750,
+          "minPrice": 2089,
+          "maxPrice": 2089,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "139",
+              "price": 2089,
+              "sqft": 575,
+              "availability": "Apr 13"
+            }
+          ]
+        },
+        {
+          "floorplan": "42.2",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 591,
+          "deposit": 750,
+          "minPrice": 2109,
+          "maxPrice": 2324,
+          "availableUnits": 3,
+          "units": [
+            {
+              "unit": "140",
+              "price": 2109,
+              "sqft": 591,
+              "availability": "Now"
+            },
+            {
+              "unit": "229",
+              "price": 2129,
+              "sqft": 591,
+              "availability": "May 19"
+            },
+            {
+              "unit": "529",
+              "price": 2324,
+              "sqft": 591,
+              "availability": "May 23"
+            }
+          ]
+        },
+        {
+          "floorplan": "43.4",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 600,
+          "deposit": 750,
+          "minPrice": 2119,
+          "maxPrice": 2119,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "141",
+              "price": 2119,
+              "sqft": 600,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "42.3",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 600,
+          "deposit": 750,
+          "minPrice": 2119,
+          "maxPrice": 2119,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "142",
+              "price": 2119,
+              "sqft": 600,
+              "availability": "Apr 16"
+            }
+          ]
+        },
+        {
+          "floorplan": "43.2",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 591,
+          "deposit": 750,
+          "minPrice": 2129,
+          "maxPrice": 2159,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "428",
+              "price": 2159,
+              "sqft": 591,
+              "availability": "May 22"
+            },
+            {
+              "unit": "228",
+              "price": 2129,
+              "sqft": 591,
+              "availability": "May 31"
+            }
+          ]
+        },
+        {
+          "floorplan": "53.1",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 585,
+          "deposit": 750,
+          "minPrice": 2138,
+          "maxPrice": 2138,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "256",
+              "price": 2138,
+              "sqft": 585,
+              "availability": "May 6"
+            }
+          ]
+        },
+        {
+          "floorplan": "15",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 612,
+          "deposit": 750,
+          "minPrice": 2809,
+          "maxPrice": 3138,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "2115",
+              "price": 3138,
+              "sqft": 612,
+              "availability": "Now"
+            },
+            {
+              "unit": "1915",
+              "price": 2809,
+              "sqft": 612,
+              "availability": "May 13"
+            }
+          ]
+        },
+        {
+          "floorplan": "23",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 695,
+          "deposit": 750,
+          "minPrice": 2899,
+          "maxPrice": 2899,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2023",
+              "price": 2899,
+              "sqft": 695,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "13",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 684,
+          "deposit": 750,
+          "minPrice": 2944,
+          "maxPrice": 2944,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1913",
+              "price": 2944,
+              "sqft": 684,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "12",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 692,
+          "deposit": 750,
+          "minPrice": 3215,
+          "maxPrice": 3215,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2112",
+              "price": 3215,
+              "sqft": 692,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.3",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 764,
+          "deposit": 1000,
+          "minPrice": 2428,
+          "maxPrice": 2638,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "149",
+              "price": 2428,
+              "sqft": 764,
+              "availability": "Now"
+            },
+            {
+              "unit": "552",
+              "price": 2638,
+              "sqft": 764,
+              "availability": "May 13"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.2",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 763,
+          "deposit": 1000,
+          "minPrice": 2443,
+          "maxPrice": 2443,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "252",
+              "price": 2443,
+              "sqft": 763,
+              "availability": "Apr 1"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.1",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 762,
+          "deposit": 1000,
+          "minPrice": 2473,
+          "maxPrice": 2473,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "452",
+              "price": 2473,
+              "sqft": 762,
+              "availability": "May 7"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.5",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 773,
+          "deposit": 1000,
+          "minPrice": 2498,
+          "maxPrice": 2498,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "247",
+              "price": 2498,
+              "sqft": 773,
+              "availability": "May 25"
+            }
+          ]
+        },
+        {
+          "floorplan": "L17",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 762,
+          "deposit": 1000,
+          "minPrice": 2767,
+          "maxPrice": 2767,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "217",
+              "price": 2767,
+              "sqft": 762,
+              "availability": "May 3"
+            }
+          ]
+        },
+        {
+          "floorplan": "L14",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 779,
+          "deposit": 1000,
+          "minPrice": 2777,
+          "maxPrice": 2777,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "214",
+              "price": 2777,
+              "sqft": 779,
+              "availability": "Apr 14"
+            }
+          ]
+        },
+        {
+          "floorplan": "18",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 855,
+          "deposit": 1000,
+          "minPrice": 3353,
+          "maxPrice": 3353,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1118",
+              "price": 3353,
+              "sqft": 855,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "18.1",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 798,
+          "deposit": 1000,
+          "minPrice": 3353,
+          "maxPrice": 3353,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "618",
+              "price": 3353,
+              "sqft": 798,
+              "availability": "May 15"
+            }
+          ]
+        },
+        {
+          "floorplan": "8",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 917,
+          "deposit": 1000,
+          "minPrice": 3413,
+          "maxPrice": 3413,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1608",
+              "price": 3413,
+              "sqft": 917,
+              "availability": "Apr 15"
+            }
+          ]
+        },
+        {
+          "floorplan": "21",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 891,
+          "deposit": 1000,
+          "minPrice": 3478,
+          "maxPrice": 3983,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "2121",
+              "price": 3983,
+              "sqft": 891,
+              "availability": "Apr 30"
+            },
+            {
+              "unit": "1821",
+              "price": 3478,
+              "sqft": 891,
+              "availability": "May 6"
+            }
+          ]
+        },
+        {
+          "floorplan": "4",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 751,
+          "deposit": 1000,
+          "minPrice": 3482,
+          "maxPrice": 3482,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2204",
+              "price": 3482,
+              "sqft": 751,
+              "availability": "Apr 24"
+            }
+          ]
+        },
+        {
+          "floorplan": "6",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 756,
+          "deposit": 1000,
+          "minPrice": 3647,
+          "maxPrice": 3647,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2106",
+              "price": 3647,
+              "sqft": 756,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "20",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 798,
+          "deposit": 1000,
+          "minPrice": 3687,
+          "maxPrice": 3687,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2120",
+              "price": 3687,
+              "sqft": 798,
+              "availability": "Apr 2"
+            }
+          ]
+        },
+        {
+          "floorplan": "19",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 848,
+          "deposit": 1000,
+          "minPrice": 3697,
+          "maxPrice": 3697,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2119",
+              "price": 3697,
+              "sqft": 848,
+              "availability": "Jul 11"
+            }
+          ]
+        },
+        {
+          "floorplan": "1",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 1016,
+          "deposit": 1000,
+          "minPrice": 4173,
+          "maxPrice": 4173,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2101",
+              "price": 4173,
+              "sqft": 1011,
+              "availability": "Mar 26"
+            }
+          ]
+        },
+        {
+          "floorplan": "11.1",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1243,
+          "deposit": 1500,
+          "minPrice": 4047,
+          "maxPrice": 4267,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "711",
+              "price": 4047,
+              "sqft": 1243,
+              "availability": "Now"
+            },
+            {
+              "unit": "1011",
+              "price": 4267,
+              "sqft": 1243,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "17",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1116,
+          "deposit": 1500,
+          "minPrice": 4087,
+          "maxPrice": 4087,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1217",
+              "price": 4087,
+              "sqft": 1116,
+              "availability": "May 1"
+            }
+          ]
+        },
+        {
+          "floorplan": "L25",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1331,
+          "deposit": 1500,
+          "minPrice": 4419,
+          "maxPrice": 4434,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "425",
+              "price": 4419,
+              "sqft": 1331,
+              "availability": "Apr 28"
+            },
+            {
+              "unit": "525",
+              "price": 4434,
+              "sqft": 1331,
+              "availability": "Apr 30"
+            }
+          ]
+        },
+        {
+          "floorplan": "26",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1342,
+          "deposit": 1500,
+          "minPrice": 4762,
+          "maxPrice": 4984,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "1826",
+              "price": 4762,
+              "sqft": 1342,
+              "availability": "Now"
+            },
+            {
+              "unit": "1926",
+              "price": 4984,
+              "sqft": 1342,
+              "availability": "May 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-24T23:35:29-07:00",
+      "floorplans": [
+        {
+          "floorplan": "62.3",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 529,
+          "deposit": 750,
+          "minPrice": 2069,
+          "maxPrice": 2069,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "164",
+              "price": 2069,
+              "sqft": 529,
+              "availability": "Mar 30"
+            }
+          ]
+        },
+        {
+          "floorplan": "43",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 575,
+          "deposit": 750,
+          "minPrice": 2089,
+          "maxPrice": 2089,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "139",
+              "price": 2089,
+              "sqft": 575,
+              "availability": "Apr 13"
+            }
+          ]
+        },
+        {
+          "floorplan": "42.2",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 591,
+          "deposit": 750,
+          "minPrice": 2109,
+          "maxPrice": 2324,
+          "availableUnits": 3,
+          "units": [
+            {
+              "unit": "140",
+              "price": 2109,
+              "sqft": 591,
+              "availability": "Now"
+            },
+            {
+              "unit": "229",
+              "price": 2129,
+              "sqft": 591,
+              "availability": "May 19"
+            },
+            {
+              "unit": "529",
+              "price": 2324,
+              "sqft": 591,
+              "availability": "May 23"
+            }
+          ]
+        },
+        {
+          "floorplan": "43.4",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 600,
+          "deposit": 750,
+          "minPrice": 2119,
+          "maxPrice": 2119,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "141",
+              "price": 2119,
+              "sqft": 600,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "42.3",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 600,
+          "deposit": 750,
+          "minPrice": 2119,
+          "maxPrice": 2119,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "142",
+              "price": 2119,
+              "sqft": 600,
+              "availability": "Apr 16"
+            }
+          ]
+        },
+        {
+          "floorplan": "43.2",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 591,
+          "deposit": 750,
+          "minPrice": 2129,
+          "maxPrice": 2159,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "428",
+              "price": 2159,
+              "sqft": 591,
+              "availability": "May 22"
+            },
+            {
+              "unit": "228",
+              "price": 2129,
+              "sqft": 591,
+              "availability": "May 31"
+            }
+          ]
+        },
+        {
+          "floorplan": "53.1",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 585,
+          "deposit": 750,
+          "minPrice": 2138,
+          "maxPrice": 2138,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "256",
+              "price": 2138,
+              "sqft": 585,
+              "availability": "May 6"
+            }
+          ]
+        },
+        {
+          "floorplan": "15",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 612,
+          "deposit": 750,
+          "minPrice": 2809,
+          "maxPrice": 3138,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "2115",
+              "price": 3138,
+              "sqft": 612,
+              "availability": "Now"
+            },
+            {
+              "unit": "1915",
+              "price": 2809,
+              "sqft": 612,
+              "availability": "May 13"
+            }
+          ]
+        },
+        {
+          "floorplan": "23",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 695,
+          "deposit": 750,
+          "minPrice": 2899,
+          "maxPrice": 2899,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2023",
+              "price": 2899,
+              "sqft": 695,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "13",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 684,
+          "deposit": 750,
+          "minPrice": 2944,
+          "maxPrice": 2944,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1913",
+              "price": 2944,
+              "sqft": 684,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "12",
+          "beds": "Studio",
+          "baths": "1 Bath",
+          "sqft": 692,
+          "deposit": 750,
+          "minPrice": 3215,
+          "maxPrice": 3215,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2112",
+              "price": 3215,
+              "sqft": 692,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.3",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 764,
+          "deposit": 1000,
+          "minPrice": 2428,
+          "maxPrice": 2638,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "149",
+              "price": 2428,
+              "sqft": 764,
+              "availability": "Now"
+            },
+            {
+              "unit": "552",
+              "price": 2638,
+              "sqft": 764,
+              "availability": "May 13"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.2",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 763,
+          "deposit": 1000,
+          "minPrice": 2443,
+          "maxPrice": 2443,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "252",
+              "price": 2443,
+              "sqft": 763,
+              "availability": "Apr 1"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.1",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 762,
+          "deposit": 1000,
+          "minPrice": 2473,
+          "maxPrice": 2473,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "452",
+              "price": 2473,
+              "sqft": 762,
+              "availability": "May 7"
+            }
+          ]
+        },
+        {
+          "floorplan": "52.5",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 773,
+          "deposit": 1000,
+          "minPrice": 2498,
+          "maxPrice": 2498,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "247",
+              "price": 2498,
+              "sqft": 773,
+              "availability": "May 25"
+            }
+          ]
+        },
+        {
+          "floorplan": "L17",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 762,
+          "deposit": 1000,
+          "minPrice": 2767,
+          "maxPrice": 2767,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "217",
+              "price": 2767,
+              "sqft": 762,
+              "availability": "May 3"
+            }
+          ]
+        },
+        {
+          "floorplan": "L14",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 779,
+          "deposit": 1000,
+          "minPrice": 2777,
+          "maxPrice": 2777,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "214",
+              "price": 2777,
+              "sqft": 779,
+              "availability": "Apr 14"
+            }
+          ]
+        },
+        {
+          "floorplan": "18",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 855,
+          "deposit": 1000,
+          "minPrice": 3353,
+          "maxPrice": 3353,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1118",
+              "price": 3353,
+              "sqft": 855,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "18.1",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 798,
+          "deposit": 1000,
+          "minPrice": 3353,
+          "maxPrice": 3353,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "618",
+              "price": 3353,
+              "sqft": 798,
+              "availability": "May 15"
+            }
+          ]
+        },
+        {
+          "floorplan": "8",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 917,
+          "deposit": 1000,
+          "minPrice": 3413,
+          "maxPrice": 3413,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1608",
+              "price": 3413,
+              "sqft": 917,
+              "availability": "Apr 15"
+            }
+          ]
+        },
+        {
+          "floorplan": "21",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 891,
+          "deposit": 1000,
+          "minPrice": 3478,
+          "maxPrice": 3983,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "2121",
+              "price": 3983,
+              "sqft": 891,
+              "availability": "Apr 30"
+            },
+            {
+              "unit": "1821",
+              "price": 3478,
+              "sqft": 891,
+              "availability": "May 6"
+            }
+          ]
+        },
+        {
+          "floorplan": "4",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 751,
+          "deposit": 1000,
+          "minPrice": 3482,
+          "maxPrice": 3482,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2204",
+              "price": 3482,
+              "sqft": 751,
+              "availability": "Apr 24"
+            }
+          ]
+        },
+        {
+          "floorplan": "6",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 756,
+          "deposit": 1000,
+          "minPrice": 3647,
+          "maxPrice": 3647,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2106",
+              "price": 3647,
+              "sqft": 756,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "20",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 798,
+          "deposit": 1000,
+          "minPrice": 3687,
+          "maxPrice": 3687,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2120",
+              "price": 3687,
+              "sqft": 798,
+              "availability": "Apr 2"
+            }
+          ]
+        },
+        {
+          "floorplan": "19",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 848,
+          "deposit": 1000,
+          "minPrice": 3697,
+          "maxPrice": 3697,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2119",
+              "price": 3697,
+              "sqft": 848,
+              "availability": "Jul 11"
+            }
+          ]
+        },
+        {
+          "floorplan": "1",
+          "beds": "1 Bed",
+          "baths": "1 Bath",
+          "sqft": 1016,
+          "deposit": 1000,
+          "minPrice": 4173,
+          "maxPrice": 4173,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "2101",
+              "price": 4173,
+              "sqft": 1011,
+              "availability": "Mar 26"
+            }
+          ]
+        },
+        {
+          "floorplan": "11.1",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1243,
+          "deposit": 1500,
+          "minPrice": 4047,
+          "maxPrice": 4267,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "711",
+              "price": 4047,
+              "sqft": 1243,
+              "availability": "Now"
+            },
+            {
+              "unit": "1011",
+              "price": 4267,
+              "sqft": 1243,
+              "availability": "Now"
+            }
+          ]
+        },
+        {
+          "floorplan": "17",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1116,
+          "deposit": 1500,
+          "minPrice": 4087,
+          "maxPrice": 4087,
+          "availableUnits": 1,
+          "units": [
+            {
+              "unit": "1217",
+              "price": 4087,
+              "sqft": 1116,
+              "availability": "May 1"
+            }
+          ]
+        },
+        {
+          "floorplan": "L25",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1331,
+          "deposit": 1500,
+          "minPrice": 4419,
+          "maxPrice": 4434,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "425",
+              "price": 4419,
+              "sqft": 1331,
+              "availability": "Apr 28"
+            },
+            {
+              "unit": "525",
+              "price": 4434,
+              "sqft": 1331,
+              "availability": "Apr 30"
+            }
+          ]
+        },
+        {
+          "floorplan": "26",
+          "beds": "2 Bed",
+          "baths": "2 Bath",
+          "sqft": 1342,
+          "deposit": 1500,
+          "minPrice": 4762,
+          "maxPrice": 4984,
+          "availableUnits": 2,
+          "units": [
+            {
+              "unit": "1826",
+              "price": 4762,
+              "sqft": 1342,
+              "availability": "Now"
+            },
+            {
+              "unit": "1926",
+              "price": 4984,
+              "sqft": 1342,
+              "availability": "May 3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
